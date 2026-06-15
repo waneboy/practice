@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TDA — Каталог</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="top-bar">
+        <header class="header">
+            <div class="header__inner">
+                <a href="#" class="header__logo">
+                    <img src="css/img/TDA-logo.png" alt="TDA">
+                </a>
+                <div class="search">
+                    <input type="text" class="search__input" placeholder="Поиск">
+                    <button type="button" class="search__btn">
+                        <img src="css/img/search.png" alt="Найти">
+                    </button>
+                </div>
+                <div class="header__location">
+                    <img src="css/img/navigation.png" alt="">
+                    <div class="header__location-info">
+                        <span class="header__location-label">Выберите филиал:</span>
+                        <span class="header__location-city">г. Владивосток</span>
+                    </div>
+                </div>
+                <div class="header__phones">
+                    <img src="css/img/phone.png" alt="">
+                    <div class="header__phones-list">
+                        <a href="tel:+71234567890">+7 (123) 456-78-90</a>
+                        <a href="tel:+71234567890">+7 (123) 456-78-90</a>
+                    </div>
+                </div>
+                <a href="#" class="header__contact">
+                    <img src="css/img/mail.png" alt="">
+                    Написать нам</a>
+            </div>
+
+            <nav class="nav">
+                <div class="nav__inner">
+                    <div class="catalog-overlay" id="catalogOverlay">
+                        <button type="button" class="nav__catalog-btn" id="catalogBtn">
+                            <img class="nav__cross" src="css/img/white-cross.png" alt="" id="catalogBtnIcon">
+                            Каталог
+                        </button>
+                    </div>
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#" class="nav__link">Молочная продукция</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">Мясная продукция</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">Напитки</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">Бакалея</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">Грибы</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">Крупы</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">Овощи</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">Ягоды</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+    </div>
+
+    <main>
+        <div class="catalog-dropdown" id="catalogDropdown">
+            <div class="catalog-dropdown__inner">
+                <aside class="catalog-dropdown__sidebar">
+                    <ul class="sidebar-list">
+                        <li class="sidebar-list__item">
+                            <a href="#">Новинки <img src="css/img/arrow-left.png" alt=""></a>
+                        </li>
+                        <li class="sidebar-list__item">
+                            <a href="#">Овощи, фрукты, ягоды, зелень, грибы <img src="css/img/arrow-left.png"
+                                    alt=""></a>
+                        </li>
+                        <li class="sidebar-list__item">
+                            <a href="#">Кулинария <img src="css/img/arrow-left.png" alt=""></a>
+                        </li>
+                        <li class="sidebar-list__item">
+                            <a href="#">Молоко, сыр, яйцо <img src="css/img/arrow-left.png" alt=""></a>
+                        </li>
+                        <li class="sidebar-list__item">
+                            <a href="#">Мясо, птица, колбасы <img src="css/img/arrow-left.png" alt=""></a>
+                        </li>
+                        <li class="sidebar-list__item">
+                            <a href="#">Рыба, икра, морепродукты <img src="css/img/arrow-left.png" alt=""></a>
+                        </li>
+                        <li class="sidebar-list__item sidebar-list__item--active">
+                            <a href="#">Крупы, масло, консервы, соусы, орехи <img src="css/img/arrow-left.png"
+                                    alt=""></a>
+                        </li>
+                        <li class="sidebar-list__item">
+                            <a href="#">Вода, соки, напитки <img src="css/img/arrow-left.png" alt=""></a>
+                        </li>
+                        <li class="sidebar-list__item">
+                            <a href="#">Хлеб, хлебцы, выпечка <img src="css/img/arrow-left.png" alt=""></a>
+                        </li>
+                        <li class="sidebar-list__item">
+                            <a href="#">Сладости, торты, пирожные <img src="css/img/arrow-left.png" alt=""></a>
+                        </li>
+                        <li class="sidebar-list__item">
+                            <a href="#">Чай, кофе, какао <img src="css/img/arrow-left.png" alt=""></a>
+                        </li>
+                        <li class="sidebar-list__item">
+                            <a href="#">Детские товары <img src="css/img/arrow-left.png" alt=""></a>
+                        </li>
+                        <li class="sidebar-list__item">
+                            <a href="#">Замороженные продукты, мороженое <img src="css/img/arrow-left.png" alt=""></a>
+                        </li>
+                        <li class="sidebar-list__item">
+                            <a href="#">Здоровое питание <img src="css/img/arrow-left.png" alt=""></a>
+                        </li>
+                    </ul>
+                </aside>
+                <div class="catalog-dropdown__content">
+                    <h2 class="catalog-dropdown__title">Крупы, масло, консервы, соусы, орехи</h2>
+                    <div class="catalog-dropdown__grid">
+                        <div class="catalog-col">
+                            <h3 class="catalog-col__heading">Орехи, сухофрукты, семечки</h3>
+                            <h3 class="catalog-col__heading">Макаронные изделия</h3>
+                            <h3 class="catalog-col__heading">Мука, всё для выпечки</h3>
+                            <ul class="catalog-col__links">
+                                <li><a href="#">Смеси для выпечки</a></li>
+                                <li><a href="#">Мука</a></li>
+                                <li><a href="#">Всё для выпечки</a></li>
+                            </ul>
+                            <h3 class="catalog-col__heading">Соусы, майонез</h3>
+                            <ul class="catalog-col__links">
+                                <li><a href="#">Майонез</a></li>
+                                <li><a href="#">Кетчуп, томатная паста</a></li>
+                                <li><a href="#">Соусы</a></li>
+                                <li><a href="#">Заправки для салата</a></li>
+                                <li><a href="#">Горчица, хрен</a></li>
+                                <li><a href="#">Уксус</a></li>
+                            </ul>
+                        </div>
+                        <div class="catalog-col">
+                            <h3 class="catalog-col__heading">Растительное масло</h3>
+                            <ul class="catalog-col__links">
+                                <li><a href="#">Подсолнечное</a></li>
+                                <li><a href="#">Оливковое</a></li>
+                                <li><a href="#">Льняное</a></li>
+                                <li><a href="#">Кукурузное</a></li>
+                                <li><a href="#">Тыквенное</a></li>
+                                <li><a href="#">Другие масла</a></li>
+                            </ul>
+                            <h3 class="catalog-col__heading">Сухие завтраки, каши, хлопья</h3>
+                            <ul class="catalog-col__links">
+                                <li><a href="#">Сухие завтраки</a></li>
+                                <li><a href="#">Геркулес, хлопья, отруби</a></li>
+                                <li><a href="#">Гранола, мюсли</a></li>
+                                <li><a href="#">Каши быстрого приготовления</a></li>
+                                <li><a href="#">Без сахара</a></li>
+                            </ul>
+                        </div>
+                        <div class="catalog-col">
+                            <h3 class="catalog-col__heading">Крупы, бобовые</h3>
+                            <ul class="catalog-col__links">
+                                <li><a href="#">Крупы</a></li>
+                                <li><a href="#">Бобовые</a></li>
+                            </ul>
+                            <h3 class="catalog-col__heading">Консервы, варенье, мёд</h3>
+                            <ul class="catalog-col__links">
+                                <li><a href="#">Овощные, грибные</a></li>
+                                <li><a href="#">Оливки, маслины</a></li>
+                                <li><a href="#">Мясные</a></li>
+                                <li><a href="#">Рыбные, морепродукты</a></li>
+                                <li><a href="#">Готовые блюда</a></li>
+                                <li><a href="#">Мёд</a></li>
+                                <li><a href="#">Фрукты в сиропе</a></li>
+                                <li><a href="#">Варенье, джем</a></li>
+                                <li><a href="#">Сиропы</a></li>
+                                <li><a href="#">Сгущёнка</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="overlay" id="overlay"></div>
+
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-menu__header">
+                <img src="css/img/TDA-logo.png" alt="TDA" class="mobile-menu__logo">
+                <button type="button" class="mobile-menu__close-btn" id="mobileMenuClose">
+                    <img src="css/img/white-cross.png" alt="Закрыть">
+                </button>
+            </div>
+            <ul class="mobile-menu__list">
+                <li><a href="#">Новинки <img src="css/img/arrow-left.png" alt=""></a></li>
+                <li><a href="#">Овощи, фрукты, ягоды, зелень, грибы <img src="css/img/arrow-left.png" alt=""></a></li>
+                <li><a href="#">Кулинария <img src="css/img/arrow-left.png" alt=""></a></li>
+                <li><a href="#">Молоко, сыр, яйцо <img src="css/img/arrow-left.png" alt=""></a></li>
+                <li><a href="#">Мясо, птица, колбасы <img src="css/img/arrow-left.png" alt=""></a></li>
+                <li><a href="#">Рыба, икра, морепродукты <img src="css/img/arrow-left.png" alt=""></a></li>
+                <li><a href="#">Крупы, масло, консервы, соусы, орехи <img src="css/img/arrow-left.png" alt=""></a></li>
+                <li><a href="#">Вода, соки, напитки <img src="css/img/arrow-left.png" alt=""></a></li>
+                <li><a href="#">Хлеб, хлебцы, выпечка <img src="css/img/arrow-left.png" alt=""></a></li>
+                <li><a href="#">Сладости, торты, пирожные <img src="css/img/arrow-left.png" alt=""></a></li>
+                <li><a href="#">Чай, кофе, какао <img src="css/img/arrow-left.png" alt=""></a></li>
+                <li><a href="#">Детские товары <img src="css/img/arrow-left.png" alt=""></a></li>
+                <li><a href="#">Замороженные продукты, мороженое <img src="css/img/arrow-left.png" alt=""></a></li>
+                <li><a href="#">Здоровое питание <img src="css/img/arrow-left.png" alt=""></a></li>
+            </ul>
+            <div class="mobile-menu__footer">
+                <div class="mobile-menu__section">
+                    <h4>О компании</h4>
+                    <a href="#">Новости</a>
+                    <a href="#">Контакты</a>
+                    <a href="#">Пользовательское соглашение</a>
+                    <a href="#">Политика обработки персональных данных</a>
+                </div>
+                <div class="mobile-menu__section">
+                    <h4>Покупателям</h4>
+                    <a href="#">Доставка и оплата</a>
+                    <a href="#">Как вернуть</a>
+                    <a href="#">Как заказать</a>
+                    <a href="#">Программа лояльности</a>
+                    <a href="#">Вопросы и ответы</a>
+                    <a href="#">Юридическим лицам</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
