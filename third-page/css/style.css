@@ -323,7 +323,7 @@ ul {
   padding: 40px 0 90px;
 }
 .article-page__container {
-  max-width: 1440px;
+  max-width: 1250px;
   margin: 0 auto;
   padding: 0 40px;
 }
@@ -392,10 +392,11 @@ ul {
   font-size: 14px;
   font-family: inherit;
   border-radius: 6px;
+  cursor: pointer;
 }
 .article__btn--prev {
   background: none;
-  border: 1px solid transparent;
+  border: 1px solid rgb(249, 249, 249);
   color: rgb(168, 168, 168);
 }
 .article__btn--next {
@@ -403,10 +404,13 @@ ul {
   border: 1px solid rgb(103, 1, 186);
   color: rgb(39, 39, 39);
 }
+.article__btn:hover {
+  border-color: #7cb51a;
+}
 
 .float-panel {
-  position: fixed;
-  right: 24px;
+  position: absolute;
+  right: 250px;
   top: 220px;
   display: flex;
   flex-direction: column;
@@ -453,7 +457,7 @@ ul {
   justify-self: end;
   width: 16px;
   height: 16px;
-  background-color: #7cb51a;
+  background-color: rgb(103, 1, 186);
   border-radius: 50%;
   color: #ffffff;
   font-size: 9px;
@@ -486,13 +490,22 @@ ul {
   gap: 0;
 }
 .footer__logo {
-  flex-shrink: 0;
-  border: 1.5px solid #d5d5d5;
-  padding: 6px 10px;
+  position: relative;
+  border: 2px solid rgb(130, 186, 1);
+  border-radius: 6px;
+  padding: 18px;
+  width: 140px;
+  height: 70px;
+  margin-bottom: 8px;
 }
 .footer__logo img {
-  height: 38px;
-  width: auto;
+  position: relative;
+  top: 10px;
+  right: 15px;
+  height: 18px;
+  display: block;
+  width: 80px;
+  height: 28px;
 }
 .footer__col {
   flex-shrink: 0;
@@ -527,6 +540,7 @@ ul {
 .footer__subscribe-row {
   display: flex;
   align-items: center;
+  gap: 20px;
   margin-bottom: 22px;
 }
 .footer__email {
@@ -534,7 +548,7 @@ ul {
   height: 42px;
   padding: 0 14px;
   border: 1px solid #d5d5d5;
-  border-right: none;
+  border-radius: 6px;
   outline: none;
   font-size: 13px;
   font-family: inherit;
@@ -550,15 +564,14 @@ ul {
   display: flex;
   align-items: center;
   gap: 8px;
-  background-color: #1c2035;
+  background-color: rgb(103, 1, 186);
   color: #ffffff;
   border: none;
+  border-radius: 6px;
   height: 42px;
   padding: 0 18px;
   font-size: 13px;
   font-family: inherit;
-  flex-shrink: 0;
-  transition: background-color 0.2s;
 }
 .footer__subscribe-btn img {
   width: 16px;
@@ -577,7 +590,7 @@ ul {
 .footer__contact-phone {
   font-size: 28px;
   font-weight: 700;
-  color: #7cb51a;
+  color: rgb(103, 1, 186);
 }
 .footer__contact-phone:hover {
   color: #6aa317;
@@ -600,8 +613,14 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 1px solid #6aa317;
+  border-radius: 50%;
+  padding: 10px;
 }
 .footer__social-link img {
-  width: 26px;
+  width: 20px;
   height: auto;
+}
+.footer__social-link-vk {
+  min-height: 43px;
 }/*# sourceMappingURL=style.css.map */
