@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог - список разделов</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__inner">
+            <a href="/second-page/index.html" class="header__logo">
+                <img src="css/img/TDA-logo.png" alt="TDA">
+            </a>
+            <div class="search">
+                <input type="text" class="search__input" placeholder="Поиск">
+                <button type="button" class="search__btn">
+                    <img src="css/img/search.png" alt="Найти">
+                </button>
+            </div>
+            <div class="header__location">
+                <img src="css/img/navigation.png" alt="">
+                <div class="header__location-info">
+                    <span class="header__location-label">Выберите филиал:</span>
+                    <span class="header__location-city">г. Владивосток</span>
+                </div>
+            </div>
+            <div class="header__phones">
+                <img src="css/img/phone.png" alt="">
+                <div class="header__phones-list">
+                    <a href="tel:+71234567890">+7 (123) 456-78-90</a>
+                    <a href="tel:+71234567890">+7 (123) 456-78-90</a>
+                </div>
+            </div>
+            <a href="#" class="header__contact">
+                <img src="css/img/mail.png" alt="">
+                Написать нам</a>
+        </div>
+
+        <nav class="nav">
+            <div class="nav__inner">
+                <div class="catalog-overlay" id="catalogOverlay">
+                    <a href="/first-page/index.html"><button type="button" class="nav__catalog-btn" id="catalogBtn">
+                            <img class="nav__cross" src="css/img/list.png" alt="" id="catalogBtnIcon">
+                            Каталог
+                        </button></a>
+                </div>
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#" class="nav__link">Молочная продукция</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Мясная продукция</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Напитки</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Бакалея</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Грибы</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Крупы</a></li>
+                    <li class="nav__item"><a href="/fifth-page/index.html" class="nav__link">Овощи</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Ягоды</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="breadcrumb">
+        <div class="breadcrumb__container">
+            <a href="/" class="breadcrumb__link">Главная</a>
+            <span class="breadcrumb__sep">|</span>
+            <span class="breadcrumb__active">Каталог</span>
+        </div>
+    </div>
+
+    <section class="news">
+        <div class="news__inner">
+            <div class="news__header">
+                <h1>Каталог</h1>
+            </div>
+            <div class="news__articles" id="news-articles"></div>
+        </div>
+    </section>
+
+    <section class="offers">
+        <div class="offers__inner">
+            <div class="offers__header">
+                <h1>Популярные товары</h1>
+                <a href="">Смотреть все</a>
+            </div>
+            <div class="offers__slider">
+                <div id="offers-track"></div>
+            </div>
+            <div class="offers__controls">
+                <button id="offers-prev"><img src="css/img/arrow_left.png" alt=""></button>
+                <div class="offers__dots">
+                    <button class="offers__dot offers__dot--active"></button>
+                    <button class="offers__dot"></button>
+                    <button class="offers__dot"></button>
+                    <button class="offers__dot"></button>
+                </div>
+                <button id="offers-next"><img src="css/img/arrow_right.png" alt=""></button>
+            </div>
+        </div>
+        <a href="#" class="offers__all-link">Смотреть все</a>
+    </section>
+
+    <div class="float-panel">
+        <div class="float-panel__item">
+            <div class="float-panel__icon-grid">
+                <img src="css/img/shopping-bag.svg" alt="">
+                <span class="float-panel__badge">2</span>
+            </div>
+            <span class="float-panel__price">1 560 ₽</span>
+        </div>
+        <div class="float-panel__item">
+            <img src="css/img/file.svg" alt="">
+        </div>
+        <div class="float-panel__item">
+            <img src="css/img/user.svg" alt="">
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer__main">
+            <div class="footer__container">
+                <a href="/" class="footer__logo">
+                    <img src="css/img/TDA-logo.png" alt="TDA">
+                </a>
+                <div class="footer__col">
+                    <h4 class="footer__col-title">О компании</h4>
+                    <ul class="footer__col-list">
+                        <li><a href="#" class="footer__col-link">Новости</a></li>
+                        <li><a href="#" class="footer__col-link">Контакты</a></li>
+                        <li><a href="#" class="footer__col-link">Пользовательское соглашение</a></li>
+                        <li><a href="#" class="footer__col-link">Политика обработки персональных данных</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__col-title">Покупателям</h4>
+                    <ul class="footer__col-list">
+                        <li><a href="#" class="footer__col-link">Доставка и оплата</a></li>
+                        <li><a href="#" class="footer__col-link">Как вернуть</a></li>
+                        <li><a href="#" class="footer__col-link">Как заказать</a></li>
+                        <li><a href="#" class="footer__col-link">Программа лояльности</a></li>
+                        <li><a href="#" class="footer__col-link">Вопросы и ответы</a></li>
+                        <li><a href="#" class="footer__col-link">Юридическим лицам</a></li>
+                    </ul>
+                </div>
+                <div class="footer__subscribe">
+                    <p class="footer__subscribe-label">Подписаться на рассылку актуальных новостей:</p>
+                    <div class="footer__subscribe-row">
+                        <input type="email" class="footer__email" placeholder="Email">
+                        <button class="footer__subscribe-btn">
+                            <img src="css/img/mail.png" alt="">
+                            Подписаться
+                        </button>
+                    </div>
+                    <p class="footer__contact-label">Заказывайте товары круглосуточно<br>и задавайте вопросы</p>
+                    <a href="tel:88001234567" class="footer__contact-phone">8 800 123-45-67</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="footer__container footer__container--row">
+                <p class="footer__copy">© Интернет-магазин "TDA"</p>
+                <div class="footer__social">
+                    <a href="#" class="footer__social-link"><img src="css/img/twitter.svg" alt="Twitter"></a>
+                    <a href="#" class="footer__social-link"><img src="css/img/facebook.svg" alt="Facebook"></a>
+                    <a href="#" class="footer__social-link footer__social-link-vk"><img src="css/img/vk.svg"
+                            alt="VK"></a>
+                    <a href="#" class="footer__social-link"><img src="css/img/instagramm.svg" alt="Instagram"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

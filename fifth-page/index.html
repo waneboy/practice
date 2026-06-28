@@ -1,21 +1,680 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <header>
-    <nav>
-      
-    </nav>
-  </header>
-  <main>
-    
-  </main>
-  <footer>
+<html lang="ru">
 
-  </footer>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог - список разделов</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__inner">
+            <a href="/second-page/index.html" class="header__logo">
+                <img src="css/img/TDA-logo.png" alt="TDA">
+            </a>
+            <div class="search">
+                <input type="text" class="search__input" placeholder="Поиск">
+                <button type="button" class="search__btn">
+                    <img src="css/img/search.png" alt="Найти">
+                </button>
+            </div>
+            <div class="header__location">
+                <img src="css/img/navigation.png" alt="">
+                <div class="header__location-info">
+                    <span class="header__location-label">Выберите филиал:</span>
+                    <span class="header__location-city">г. Владивосток</span>
+                </div>
+            </div>
+            <div class="header__phones">
+                <img src="css/img/phone.png" alt="">
+                <div class="header__phones-list">
+                    <a href="tel:+71234567890">+7 (123) 456-78-90</a>
+                    <a href="tel:+71234567890">+7 (123) 456-78-90</a>
+                </div>
+            </div>
+            <a href="#" class="header__contact">
+                <img src="css/img/mail.png" alt="">
+                Написать нам</a>
+        </div>
+
+        <nav class="nav">
+            <div class="nav__inner">
+                <div class="catalog-overlay" id="catalogOverlay">
+                   <a href="/first-page/index.html"><button type="button" class="nav__catalog-btn" id="catalogBtn">
+                        <img class="nav__cross" src="css/img/list.png" alt="" id="catalogBtnIcon">
+                        Каталог
+                    </button></a>
+                </div>
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#" class="nav__link">Молочная продукция</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Мясная продукция</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Напитки</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Бакалея</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Грибы</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Крупы</a></li>
+                    <li class="nav__item"><a href="/fifth-page/index.html" class="nav__link">Овощи</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Ягоды</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="breadcrumb">
+        <div class="breadcrumb__container">
+            <a href="/" class="breadcrumb__link">Главная</a>
+            <span class="breadcrumb__sep">|</span>
+            <a href="#" class="breadcrumb__link">Новости</a>
+            <span class="breadcrumb__sep">|</span>
+            <span class="breadcrumb__active">Овощи, фрукты, зелень, грибы</span>
+        </div>
+    </div>
+
+    <main class="catalog">
+
+        <aside class="catalog__sidebar">
+            <button class="catalog__back-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+                <span>Назад</span>
+            </button>
+
+            <div class="catalog__filter-group">
+                <h3 class="catalog__filter-title">Категории</h3>
+                <ul class="catalog__category-list">
+                    <li><a href="#" class="catalog__category-link">Овощи</a></li>
+                    <li><a href="#" class="catalog__category-link">Фрукты</a></li>
+                    <li><a href="#" class="catalog__category-link">Ягоды</a></li>
+                    <li><a href="#" class="catalog__category-link">Зелень, салаты, травы</a></li>
+                    <li><a href="#" class="catalog__category-link">Грибы</a></li>
+                </ul>
+            </div>
+
+            <div class="catalog__filter-group">
+                <h3 class="catalog__filter-title">Предложения</h3>
+                <div class="catalog__check-box">
+                    <label class="catalog__check-label">
+                        <input type="checkbox" checked class="catalog__check-input">
+                        <span class="catalog__check-icon catalog__check-icon--checked"></span>
+                        <span class="catalog__check-text">Со скидкой</span>
+                    </label>
+                    <span class="catalog__check-count">(300)</span>
+                </div>
+                <div class="catalog__check-box">
+                    <label class="catalog__check-label">
+                        <input type="checkbox" class="catalog__check-input">
+                        <span class="catalog__check-icon"></span>
+                        <span class="catalog__check-text">Новинка</span>
+                    </label>
+                    <span class="catalog__check-count">(300)</span>
+                </div>
+                <div class="catalog__check-box">
+                    <label class="catalog__check-label">
+                        <input type="checkbox" class="catalog__check-input">
+                        <span class="catalog__check-icon"></span>
+                        <span class="catalog__check-text">Акции</span>
+                    </label>
+                    <span class="catalog__check-count">(300)</span>
+                </div>
+            </div>
+
+            <div class="catalog__filter-group">
+                <div class="catalog__filter-header">
+                    <h3 class="catalog__filter-title">Цена, ₽</h3>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="18 15 12 9 6 15"></polyline>
+                    </svg>
+                </div>
+                <div class="catalog__price-inputs">
+                    <div class="catalog__price-field">
+                        <div class="spacer-h"></div>
+                        <span class="catalog__price-prefix">от</span>
+                        <input type="text" value="240">
+                    </div>
+                    <span class="catalog__price-divider">-</span>
+                    <div class="catalog__price-field">
+                        <div class="spacer-h"></div>
+                        <span class="catalog__price-prefix">до</span>
+                        <input type="text" value="2690">
+                    </div>
+                </div>
+                <div class="catalog__range-slider">
+                    <div class="catalog__slider-track"></div>
+                    <div class="catalog__slider-handle catalog__slider-handle--left"></div>
+                    <div class="catalog__slider-handle catalog__slider-handle--right"></div>
+                </div>
+                <div class="catalog__range-labels">
+                    <span> ₽</span>
+                    <span> ₽</span>
+                </div>
+            </div>
+
+            <div class="catalog__filter-group">
+                <div class="catalog__filter-header">
+                    <h3 class="catalog__filter-title">Тип продукта</h3>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="18 15 12 9 6 15"></polyline>
+                    </svg>
+                </div>
+                <div class="catalog__inline-search">
+                    <div class="spacer-h"></div>
+                    <input type="text" placeholder="Поиск по списку">
+                    <button class="catalog__inline-search-btn">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                    </button>
+                </div>
+                <div class="catalog__scroll-box">
+                    <div class="catalog__check-box"><label class="catalog__check-label"><input type="checkbox"
+                                class="catalog__check-input"><span class="catalog__check-icon"></span><span
+                                class="catalog__check-text">Авокадо</span></label></div>
+                    <div class="catalog__check-box"><label class="catalog__check-label"><input type="checkbox"
+                                class="catalog__check-input"><span class="catalog__check-icon"></span><span
+                                class="catalog__check-text">Аджика</span></label></div>
+                    <div class="catalog__check-box"><label class="catalog__check-label"><input type="checkbox"
+                                class="catalog__check-input"><span class="catalog__check-icon"></span><span
+                                class="catalog__check-text">Айва</span></label></div>
+                    <div class="catalog__check-box"><label class="catalog__check-label"><input type="checkbox"
+                                class="catalog__check-input"><span class="catalog__check-icon"></span><span
+                                class="catalog__check-text">Ананас</span></label></div>
+                    <div class="catalog__check-box"><label class="catalog__check-label"><input type="checkbox"
+                                class="catalog__check-input"><span class="catalog__check-icon"></span><span
+                                class="catalog__check-text">Апельсин</span></label></div>
+                    <div class="catalog__check-box"><label class="catalog__check-label"><input type="checkbox"
+                                class="catalog__check-input"><span class="catalog__check-icon"></span><span
+                                class="catalog__check-text">Арбуз</span></label></div>
+                </div>
+            </div>
+
+            <div class="catalog__accordion-item">
+                <span>Не содержит</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </div>
+            <div class="catalog__accordion-item">
+                <span>Особенности</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </div>
+            <div class="catalog__accordion-item">
+                <span>Бренд</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </div>
+            <div class="catalog__accordion-item">
+                <span>Страна</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </div>
+
+            <button class="catalog__clear-btn">Сбросить всё</button>
+        </aside>
+
+        <div class="catalog__main-content">
+
+            <div class="catalog__news-row">
+                <div class="catalog__news-slider">
+                    <h2 class="catalog__news-title">Новинки</h2>
+                    <div class="catalog__news-items">
+                        <div class="catalog__mini-card">
+                            <div class="catalog__mini-img">
+                                <img src="css/img/Rectangle 1504.png" alt="Товар 1" class="catalog__mini-img-inner">
+                            </div>
+                        </div>
+                        <div class="catalog__mini-card">
+                            <div class="catalog__mini-img">
+                                <img src="css/img/Rectangle 1503.png" alt="Товар 1" class="catalog__mini-img-inner">
+                            </div>
+                        </div>
+                        <div class="catalog__mini-card">
+                            <div class="catalog__mini-img">
+                                <img src="css/img/Rectangle 1495.png" alt="Товар 1" class="catalog__mini-img-inner">
+                            </div>
+                        </div>
+                        <div class="catalog__mini-card">
+                            <div class="catalog__mini-img">
+                                <img src="css/img/Rectangle 1484.png" alt="Товар 1" class="catalog__mini-img-inner">
+                            </div>
+                        </div>
+                        <div class="catalog__mini-info">
+                            <p class="catalog__mini-name">Кетчуп «Томатный „Кубаночка" 310 г.</p>
+                            <div class="catalog__mini-prices">
+                                <span class="catalog__mini-price--old">55,90 ₽</span>
+                                <div class="catalog__mini-price-row">
+                                    <span class="catalog__mini-price--current">42,30 ₽</span>
+                                    <button class="catalog__mini-cart-btn">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2">
+                                            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog__news-scrollbar">
+                        <div class="catalog__scrollbar-thumb"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="catalog__sorting">
+                <div class="catalog__sorting-bar">
+                    <div class="catalog__sorting-dropdowns">
+                        <div class="catalog__sort-select">
+                            <div class="spacer-h"></div>
+                            <span class="catalog__sort-text">Показывать по 40</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                            <div class="spacer-h"></div>
+                        </div>
+                        <div class="catalog__sort-select">
+                            <div class="spacer-h"></div>
+                            <span class="catalog__sort-text">По популярности</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                            <div class="spacer-h"></div>
+                        </div>
+                        <div class="catalog__sort-select">
+                            <div class="spacer-h"></div>
+                            <span class="catalog__sort-text">По возрастанию цены</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                            <div class="spacer-h"></div>
+                        </div>
+                    </div>
+                    <div class="catalog__view-switches">
+                        <button class="catalog__view-btn catalog__view-btn--active">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <rect x="3" y="3" width="4" height="4" rx="1"></rect>
+                                <rect x="10" y="3" width="4" height="4" rx="1"></rect>
+                                <rect x="17" y="3" width="4" height="4" rx="1"></rect>
+                                <rect x="3" y="10" width="4" height="4" rx="1"></rect>
+                                <rect x="10" y="10" width="4" height="4" rx="1"></rect>
+                                <rect x="17" y="10" width="4" height="4" rx="1"></rect>
+                                <rect x="3" y="17" width="4" height="4" rx="1"></rect>
+                                <rect x="10" y="17" width="4" height="4" rx="1"></rect>
+                                <rect x="17" y="17" width="4" height="4" rx="1"></rect>
+                            </svg>
+                        </button>
+                        <button class="catalog__view-btn">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5">
+                                <rect x="3" y="3" width="7" height="7" rx="1"></rect>
+                                <rect x="14" y="3" width="7" height="7" rx="1"></rect>
+                                <rect x="3" y="14" width="7" height="7" rx="1"></rect>
+                                <rect x="14" y="14" width="7" height="7" rx="1"></rect>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="catalog__active-tags">
+                    <div class="catalog__tag">
+                        <span class="catalog__tag-text">Со скидкой</span>
+                        <span class="catalog__tag-close">
+                            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="18" y1="6" x2="6" y2="18"></line>
+                                <line x1="6" y1="6" x2="18" y2="18"></line>
+                            </svg>
+                        </span>
+                    </div>
+                    <button class="catalog__reset-btn">Сбросить всё</button>
+                </div>
+            </div>
+
+            <div class="catalog__products-grid">
+
+                <div class="product-card product-card--active">
+                    <div class="product-card__badges">
+                        <span class="product-card__badge product-card__badge--discount">-40%</span>
+                        <span class="product-card__badge product-card__badge--new">Новинка</span>
+                        <span class="product-card__badge product-card__badge--hit">Хит</span>
+                    </div>
+                    <div class="product-card__image">
+                        <img src="css/img/carrot.png" alt="Морковь мытая 0.7-1.0 кг" class="product-card__img">
+                    </div>
+                    <div class="product-card__info">
+                        <h4 class="product-card__title">Морковь мытая 0.7-1.0 кг</h4>
+                        <div class="product-card__prices">
+                            <span class="product-card__price--old">99,90 ₽/кг</span>
+                            <span class="product-card__price--current">59,90 ₽/кг</span>
+                        </div>
+                    </div>
+                    <div class="product-card__controls">
+                        <div class="product-card__counter">
+                            <button type="button" class="product-card__counter-btn--minus">-</button>
+                            <input type="text" value="2" class="product-card__counter-input">
+                            <button type="button"
+                                class="product-card__counter-btn--plus product-card__counter-btn--plus-active">+</button>
+                        </div>
+                        <button type="button" class="product-card__cart-btn product-card__cart-btn--active">В
+                            корзину</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-card__badges">
+                        <span class="product-card__badge product-card__badge--discount">-40%</span>
+                        <span class="product-card__badge product-card__badge--new">Новинка</span>
+                        <span class="product-card__badge product-card__badge--hit">Хит</span>
+                    </div>
+                    <div class="product-card__image">
+                        <img src="css/img/carrot.png" alt="Морковь мытая 0.7-1.0 кг" class="product-card__img">
+                    </div>
+                    <div class="product-card__info">
+                        <h4 class="product-card__title">Морковь мытая 0.7-1.0 кг</h4>
+                        <div class="product-card__prices">
+                            <span class="product-card__price--old">99,90 ₽/кг</span>
+                            <span class="product-card__price--current">59,90 ₽/кг</span>
+                        </div>
+                    </div>
+                    <div class="product-card__controls">
+                        <div class="product-card__counter">
+                            <button type="button" class="product-card__counter-btn--minus">-</button>
+                            <input type="text" value="1" class="product-card__counter-input">
+                            <button type="button" class="product-card__counter-btn--plus">+</button>
+                        </div>
+                        <button type="button" class="product-card__cart-btn">В корзину</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-card__badges">
+                        <span class="product-card__badge product-card__badge--discount">-40%</span>
+                        <span class="product-card__badge product-card__badge--new">Новинка</span>
+                        <span class="product-card__badge product-card__badge--hit">Хит</span>
+                    </div>
+                    <div class="product-card__image">
+                        <img src="css/img/carrot.png" alt="Морковь мытая 0.7-1.0 кг" class="product-card__img">
+                    </div>
+                    <div class="product-card__info">
+                        <h4 class="product-card__title">Морковь мытая 0.7-1.0 кг</h4>
+                        <div class="product-card__prices">
+                            <span class="product-card__price--old">99,90 ₽/кг</span>
+                            <span class="product-card__price--current">59,90 ₽/кг</span>
+                        </div>
+                    </div>
+                    <div class="product-card__controls">
+                        <div class="product-card__counter">
+                            <button type="button" class="product-card__counter-btn--minus">-</button>
+                            <input type="text" value="1" class="product-card__counter-input">
+                            <button type="button" class="product-card__counter-btn--plus">+</button>
+                        </div>
+                        <button type="button" class="product-card__cart-btn">В корзину</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-card__badges">
+                        <span class="product-card__badge product-card__badge--discount">-40%</span>
+                        <span class="product-card__badge product-card__badge--new">Новинка</span>
+                        <span class="product-card__badge product-card__badge--hit">Хит</span>
+                    </div>
+                    <div class="product-card__image">
+                        <img src="css/img/carrot.png" alt="Морковь мытая 0.7-1.0 кг" class="product-card__img">
+                    </div>
+                    <div class="product-card__info">
+                        <h4 class="product-card__title">Морковь мытая 0.7-1.0 кг</h4>
+                        <div class="product-card__prices">
+                            <span class="product-card__price--old">99,90 ₽/кг</span>
+                            <span class="product-card__price--current">59,90 ₽/кг</span>
+                        </div>
+                    </div>
+                    <div class="product-card__controls">
+                        <div class="product-card__counter">
+                            <button type="button" class="product-card__counter-btn--minus">-</button>
+                            <input type="text" value="1" class="product-card__counter-input">
+                            <button type="button" class="product-card__counter-btn--plus">+</button>
+                        </div>
+                        <button type="button" class="product-card__cart-btn">В корзину</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-card__badges">
+                        <span class="product-card__badge product-card__badge--discount">-40%</span>
+                        <span class="product-card__badge product-card__badge--new">Новинка</span>
+                        <span class="product-card__badge product-card__badge--hit">Хит</span>
+                    </div>
+                    <div class="product-card__image">
+                        <img src="css/img/carrot.png" alt="Морковь мытая 0.7-1.0 кг" class="product-card__img">
+                    </div>
+                    <div class="product-card__info">
+                        <h4 class="product-card__title">Морковь мытая 0.7-1.0 кг</h4>
+                        <div class="product-card__prices">
+                            <span class="product-card__price--old">99,90 ₽/кг</span>
+                            <span class="product-card__price--current">59,90 ₽/кг</span>
+                        </div>
+                    </div>
+                    <div class="product-card__controls">
+                        <div class="product-card__counter">
+                            <button type="button" class="product-card__counter-btn--minus">-</button>
+                            <input type="text" value="1" class="product-card__counter-input">
+                            <button type="button" class="product-card__counter-btn--plus">+</button>
+                        </div>
+                        <button type="button" class="product-card__cart-btn">В корзину</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-card__badges">
+                        <span class="product-card__badge product-card__badge--discount">-40%</span>
+                        <span class="product-card__badge product-card__badge--new">Новинка</span>
+                        <span class="product-card__badge product-card__badge--hit">Хит</span>
+                    </div>
+                    <div class="product-card__image">
+                        <img src="css/img/carrot.png" alt="Морковь мытая 0.7-1.0 кг" class="product-card__img">
+                    </div>
+                    <div class="product-card__info">
+                        <h4 class="product-card__title">Морковь мытая 0.7-1.0 кг</h4>
+                        <div class="product-card__prices">
+                            <span class="product-card__price--old">99,90 ₽/кг</span>
+                            <span class="product-card__price--current">59,90 ₽/кг</span>
+                        </div>
+                    </div>
+                    <div class="product-card__controls">
+                        <div class="product-card__counter">
+                            <button type="button" class="product-card__counter-btn--minus">-</button>
+                            <input type="text" value="1" class="product-card__counter-input">
+                            <button type="button" class="product-card__counter-btn--plus">+</button>
+                        </div>
+                        <button type="button" class="product-card__cart-btn">В корзину</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-card__badges">
+                        <span class="product-card__badge product-card__badge--discount">-40%</span>
+                        <span class="product-card__badge product-card__badge--new">Новинка</span>
+                        <span class="product-card__badge product-card__badge--hit">Хит</span>
+                    </div>
+                    <div class="product-card__image">
+                        <img src="css/img/carrot.png" alt="Морковь мытая 0.7-1.0 кг" class="product-card__img">
+                    </div>
+                    <div class="product-card__info">
+                        <h4 class="product-card__title">Морковь мытая 0.7-1.0 кг</h4>
+                        <div class="product-card__prices">
+                            <span class="product-card__price--old">99,90 ₽/кг</span>
+                            <span class="product-card__price--current">59,90 ₽/кг</span>
+                        </div>
+                    </div>
+                    <div class="product-card__controls">
+                        <div class="product-card__counter">
+                            <button type="button" class="product-card__counter-btn--minus">-</button>
+                            <input type="text" value="1" class="product-card__counter-input">
+                            <button type="button" class="product-card__counter-btn--plus">+</button>
+                        </div>
+                        <button type="button" class="product-card__cart-btn">В корзину</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-card__badges">
+                        <span class="product-card__badge product-card__badge--discount">-40%</span>
+                        <span class="product-card__badge product-card__badge--new">Новинка</span>
+                        <span class="product-card__badge product-card__badge--hit">Хит</span>
+                    </div>
+                    <div class="product-card__image">
+                        <img src="css/img/carrot.png" alt="Морковь мытая 0.7-1.0 кг" class="product-card__img">
+                    </div>
+                    <div class="product-card__info">
+                        <h4 class="product-card__title">Морковь мытая 0.7-1.0 кг</h4>
+                        <div class="product-card__prices">
+                            <span class="product-card__price--old">99,90 ₽/кг</span>
+                            <span class="product-card__price--current">59,90 ₽/кг</span>
+                        </div>
+                    </div>
+                    <div class="product-card__controls">
+                        <div class="product-card__counter">
+                            <button type="button" class="product-card__counter-btn--minus">-</button>
+                            <input type="text" value="1" class="product-card__counter-input">
+                            <button type="button" class="product-card__counter-btn--plus">+</button>
+                        </div>
+                        <button type="button" class="product-card__cart-btn">В корзину</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-card__badges">
+                        <span class="product-card__badge product-card__badge--discount">-40%</span>
+                        <span class="product-card__badge product-card__badge--new">Новинка</span>
+                        <span class="product-card__badge product-card__badge--hit">Хит</span>
+                    </div>
+                    <div class="product-card__image">
+                        <img src="css/img/carrot.png" alt="Морковь мытая 0.7-1.0 кг" class="product-card__img">
+                    </div>
+                    <div class="product-card__info">
+                        <h4 class="product-card__title">Морковь мытая 0.7-1.0 кг</h4>
+                        <div class="product-card__prices">
+                            <span class="product-card__price--old">99,90 ₽/кг</span>
+                            <span class="product-card__price--current">59,90 ₽/кг</span>
+                        </div>
+                    </div>
+                    <div class="product-card__controls">
+                        <div class="product-card__counter">
+                            <button type="button" class="product-card__counter-btn--minus">-</button>
+                            <input type="text" value="1" class="product-card__counter-input">
+                            <button type="button" class="product-card__counter-btn--plus">+</button>
+                        </div>
+                        <button type="button" class="product-card__cart-btn">В корзину</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="catalog__pagination">
+                <button type="button" class="catalog__load-more">Показать ещё</button>
+                <div class="catalog__pages">
+                    <span class="catalog__page catalog__page--active">1</span>
+                    <a href="#" class="catalog__page">2</a>
+                    <a href="#" class="catalog__page">3</a>
+                    <a href="#" class="catalog__page">4</a>
+                    <a href="#" class="catalog__page">5</a>
+                    <span class="catalog__page-dots">...</span>
+                    <a href="#" class="catalog__page">8</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="float-panel">
+        <div class="float-panel__item">
+            <div class="float-panel__icon-grid">
+                <img src="css/img/shopping-bag.png" alt="">
+                <span class="float-panel__badge">2</span>
+            </div>
+            <span class="float-panel__price">1 560 ₽</span>
+        </div>
+        <div class="float-panel__item">
+            <img src="css/img/file.png" alt="">
+        </div>
+        <div class="float-panel__item">
+            <img src="css/img/user.png" alt="">
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('.catalog__products-grid').addEventListener('click', function(e) {
+            if (!e.target.closest('button') && !e.target.closest('input')) {
+                window.location.href = '/sixth-page/index.html';
+            }
+        });
+    </script>
+
+    <footer class="footer">
+        <div class="footer__main">
+            <div class="footer__container">
+                <a href="/" class="footer__logo">
+                    <img src="css/img/TDA-logo.png" alt="TDA">
+                </a>
+                <div class="footer__col">
+                    <h4 class="footer__col-title">О компании</h4>
+                    <ul class="footer__col-list">
+                        <li><a href="#" class="footer__col-link">Новости</a></li>
+                        <li><a href="#" class="footer__col-link">Контакты</a></li>
+                        <li><a href="#" class="footer__col-link">Пользовательское соглашение</a></li>
+                        <li><a href="#" class="footer__col-link">Политика обработки персональных данных</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__col-title">Покупателям</h4>
+                    <ul class="footer__col-list">
+                        <li><a href="#" class="footer__col-link">Доставка и оплата</a></li>
+                        <li><a href="#" class="footer__col-link">Как вернуть</a></li>
+                        <li><a href="#" class="footer__col-link">Как заказать</a></li>
+                        <li><a href="#" class="footer__col-link">Программа лояльности</a></li>
+                        <li><a href="#" class="footer__col-link">Вопросы и ответы</a></li>
+                        <li><a href="#" class="footer__col-link">Юридическим лицам</a></li>
+                    </ul>
+                </div>
+                <div class="footer__subscribe">
+                    <p class="footer__subscribe-label">Подписаться на рассылку актуальных новостей:</p>
+                    <div class="footer__subscribe-row">
+                        <input type="email" class="footer__email" placeholder="Email">
+                        <button class="footer__subscribe-btn">
+                            <img src="css/img/mail.png" alt="">
+                            Подписаться
+                        </button>
+                    </div>
+                    <p class="footer__contact-label">Заказывайте товары круглосуточно<br>и задавайте вопросы</p>
+                    <a href="tel:88001234567" class="footer__contact-phone">8 800 123-45-67</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="footer__container footer__container--row">
+                <p class="footer__copy">© Интернет-магазин "TDA"</p>
+                <div class="footer__social">
+                    <a href="#" class="footer__social-link"><img src="css/img/twitter.png" alt="Twitter"></a>
+                    <a href="#" class="footer__social-link"><img src="css/img/facebook.png" alt="Facebook"></a>
+                    <a href="#" class="footer__social-link footer__social-link-vk"><img src="css/img/vk.png"
+                            alt="VK"></a>
+                    <a href="#" class="footer__social-link"><img src="css/img/instagram.png" alt="Instagram"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
 </body>
+
 </html>

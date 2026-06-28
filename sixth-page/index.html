@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интернет-магазин - Продукты</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__inner">
+            <a href="/second-page/index.html" class="header__logo">
+                <img src="css/img/TDA-logo.png" alt="TDA">
+            </a>
+            <div class="search">
+                <input type="text" class="search__input" placeholder="Поиск">
+                <button type="button" class="search__btn">
+                    <img src="css/img/search.png" alt="Найти">
+                </button>
+            </div>
+            <div class="header__location">
+                <img src="css/img/navigation.png" alt="">
+                <div class="header__location-info">
+                    <span class="header__location-label">Выберите филиал:</span>
+                    <span class="header__location-city">г. Владивосток</span>
+                </div>
+            </div>
+            <div class="header__phones">
+                <img src="css/img/phone.png" alt="">
+                <div class="header__phones-list">
+                    <a href="tel:+71234567890">+7 (123) 456-78-90</a>
+                    <a href="tel:+71234567890">+7 (123) 456-78-90</a>
+                </div>
+            </div>
+            <a href="#" class="header__contact">
+                <img src="css/img/mail.png" alt="">
+                Написать нам</a>
+        </div>
+
+        <nav class="nav">
+            <div class="nav__inner">
+                <div class="catalog-overlay" id="catalogOverlay">
+                    <a href="/first-page/index.html"><button type="button" class="nav__catalog-btn" id="catalogBtn">
+                            <img class="nav__cross" src="css/img/list.png" alt="" id="catalogBtnIcon">
+                            Каталог
+                        </button></a>
+                </div>
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#" class="nav__link">Молочная продукция</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Мясная продукция</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Напитки</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Бакалея</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Грибы</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Крупы</a></li>
+                    <li class="nav__item"><a href="/fifth-page/index.html" class="nav__link">Овощи</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Ягоды</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="breadcrumb">
+        <div class="breadcrumb__container">
+            <a href="/" class="breadcrumb__link">Главная</a>
+            <span class="breadcrumb__sep">|</span>
+            <a href="#" class="breadcrumb__link">Каталог</a>
+            <span class="breadcrumb__sep">|</span>
+            <a href="#" class="breadcrumb__link">Овощи, фрукты, зелень, грибы</a>
+            <span class="breadcrumb__sep">|</span>
+            <a href="#" class="breadcrumb__link">Овощи</a>
+            <span class="breadcrumb__sep">|</span>
+            <span class="breadcrumb__active">Морковь мытая 0.7-1.0 кг</span>
+        </div>
+    </div>
+
+    <main>
+        <section class="catalog">
+            <div class="catalog__inner">
+                <div class="catalog__sidebar">
+                    <div class="catalog__scroll">
+                        <div id="catalog-top-list"></div>
+                        <h2>О компании</h2>
+                        <div id="catalog-about-list"></div>
+                        <h2>Покупателям</h2>
+                        <div id="catalog-buyers-list"></div>
+                    </div>
+                </div>
+                <div class="catalog__content">
+                    <div class="catalog__content-inner">
+                        <h1>Бакалея</h1>
+                        <div class="catalog__columns">
+                            <div id="catalog-col-1"></div>
+                            <div id="catalog-col-2"></div>
+                            <div id="catalog-col-3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="product">
+            <div class="product__inner">
+                <div class="product__layout">
+                    <div class="product__gallery">
+                        <div class="product__thumbnails">
+                            <img class="product__thumbnail--active" src="css/img/mini_photo.png" alt="">
+                            <img class="product__thumbnail" src="css/img/mini_photo.png" alt="">
+                            <img class="product__thumbnail" src="css/img/mini_photo.png" alt="">
+                        </div>
+                        <div class="product__main-photo">
+                            <img class="product__main-img" src="css/img/big_photo.png" alt="">
+                            <img class="product__main-img--mobile" src="css/img/big_morkovka.png" alt="">
+                            <div class="product__photo-dots">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__details">
+                        <div class="product__card">
+                            <div class="product__card-inner">
+                                <div class="product__badges">
+                                    <div class="product__badge--sale">
+                                        <p>-40%</p>
+                                    </div>
+                                    <div class="product__badge--new">
+                                        <p>Новинка</p>
+                                    </div>
+                                    <div class="product__badge--hit">
+                                        <p>Хит</p>
+                                    </div>
+                                </div>
+                                <div class="product__name">
+                                    <h1>Морковь мытая 0.7-1.0 кг</h1>
+                                </div>
+                                <div class="product__buy-row">
+                                    <div class="product__prices">
+                                        <p>99,90 ₽/кг</p>
+                                        <h2>59,90 ₽/кг</h2>
+                                    </div>
+                                    <div class="counter">
+                                        <button class="counter__btn--minus">-</button>
+                                        <div class="counter__num">1</div>
+                                        <button class="counter__btn--plus">+</button>
+                                    </div>
+                                    <div class="product__to-cart">
+                                        <button>В корзину</button>
+                                    </div>
+                                </div>
+                                <div class="product__desc">
+                                    <h3>Описание:</h3>
+                                    <div>
+                                        <p>Год урожая 2021.</p>
+                                        <p>Хранить при температуре от +2 до +8 C.</p>
+                                        <p>Срок годности 14 дней.</p>
+                                        <p>ТУ 9739-007-73492117-05</p>
+                                    </div>
+                                </div>
+                                <div class="product__specs">
+                                    <h3>Характеристики:</h3>
+                                    <div id="product-specs-list"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="offers">
+            <div class="offers__inner">
+                <div class="offers__header">
+                    <h1>Наши предложения</h1>
+                    <a href="">Смотреть все</a>
+                </div>
+                <div class="offers__slider">
+                    <div id="offers-track"></div>
+                </div>
+                <div class="offers__controls">
+                    <button id="offers-prev"><img src="css/img/arrow_left.png" alt=""></button>
+                    <div class="offers__dots">
+                        <button class="offers__dot offers__dot--active"></button>
+                        <button class="offers__dot"></button>
+                        <button class="offers__dot"></button>
+                        <button class="offers__dot"></button>
+                    </div>
+                    <button id="offers-next"><img src="css/img/arrow_right.png" alt=""></button>
+                </div>
+            </div>
+            <a href="#" class="offers__all-link">Смотреть все</a>
+        </section>
+        <section class="bottom-nav">
+            <button onclick="toggleColor(this)" data-target="catalog">
+                <div><img id="catalog-btn-mobile-img" src="css/img/list.png" alt="">
+                    <p>Каталог</p>
+                </div>
+            </button>
+            <a href="" onclick="toggleColor(this)">
+                <div><img src="css/img/search.png" alt="">
+                    <p>Поиск</p>
+                </div>
+            </a>
+            <a href="" onclick="toggleColor(this)">
+                <div><img src="css/img/bag.png" alt="">
+                    <p>Корзина</p>
+                </div>
+            </a>
+            <a href="" onclick="toggleColor(this)">
+                <div><img src="css/img/user.png" alt="">
+                    <p>Аккаунт</p>
+                </div>
+            </a>
+        </section>
+    </main>
+
+    <div class="float-panel">
+        <div class="float-panel__item">
+            <div class="float-panel__icon-grid">
+                <img src="css/img/shopping-bag.png" alt="">
+                <span class="float-panel__badge">2</span>
+            </div>
+            <span class="float-panel__price">1 560 ₽</span>
+        </div>
+        <div class="float-panel__item">
+            <img src="css/img/file.png" alt="">
+        </div>
+        <div class="float-panel__item">
+            <img src="css/img/user-green.png" alt="">
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer__main">
+            <div class="footer__container">
+                <a href="/" class="footer__logo">
+                    <img src="css/img/TDA-logo.png" alt="TDA">
+                </a>
+                <div class="footer__col">
+                    <h4 class="footer__col-title">О компании</h4>
+                    <ul class="footer__col-list">
+                        <li><a href="#" class="footer__col-link">Новости</a></li>
+                        <li><a href="#" class="footer__col-link">Контакты</a></li>
+                        <li><a href="#" class="footer__col-link">Пользовательское соглашение</a></li>
+                        <li><a href="#" class="footer__col-link">Политика обработки персональных данных</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__col-title">Покупателям</h4>
+                    <ul class="footer__col-list">
+                        <li><a href="#" class="footer__col-link">Доставка и оплата</a></li>
+                        <li><a href="#" class="footer__col-link">Как вернуть</a></li>
+                        <li><a href="#" class="footer__col-link">Как заказать</a></li>
+                        <li><a href="#" class="footer__col-link">Программа лояльности</a></li>
+                        <li><a href="#" class="footer__col-link">Вопросы и ответы</a></li>
+                        <li><a href="#" class="footer__col-link">Юридическим лицам</a></li>
+                    </ul>
+                </div>
+                <div class="footer__subscribe">
+                    <p class="footer__subscribe-label">Подписаться на рассылку актуальных новостей:</p>
+                    <div class="footer__subscribe-row">
+                        <input type="email" class="footer__email" placeholder="Email">
+                        <button class="footer__subscribe-btn">
+                            <img src="css/img/mail.png" alt="">
+                            Подписаться
+                        </button>
+                    </div>
+                    <p class="footer__contact-label">Заказывайте товары круглосуточно<br>и задавайте вопросы</p>
+                    <a href="tel:88001234567" class="footer__contact-phone">8 800 123-45-67</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="footer__container footer__container--row">
+                <p class="footer__copy">© Интернет-магазин "TDA"</p>
+                <div class="footer__social">
+                    <a href="#" class="footer__social-link"><img src="css/img/twitter.png" alt="Twitter"></a>
+                    <a href="#" class="footer__social-link"><img src="css/img/facebook.png" alt="Facebook"></a>
+                    <a href="#" class="footer__social-link footer__social-link-vk"><img src="css/img/vk.png"
+                            alt="VK"></a>
+                    <a href="#" class="footer__social-link"><img src="css/img/instagram.png" alt="Instagram"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
